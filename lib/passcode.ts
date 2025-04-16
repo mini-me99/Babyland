@@ -41,13 +41,13 @@ export async function storePasscode(passcode: string, expiresAt: number) {
 // Validate a passcode
 export async function validatePasscode(passcode: string): Promise<boolean> {
   try {
-    // For local development
-    const generatorUrl = process.env.NEXT_PUBLIC_PASSCODE_GENERATOR_URL || "http://localhost:3001"
-
+    const generatorUrl = https://v0-new-project-uuhmjf0thl7.vercel.app/ || "http://localhost:3001";
+    
     // Fetch the current passcode from the generator site
     const response = await fetch(`${generatorUrl}/api/current-passcode`, {
       cache: "no-store",
-    })
+    });
+
 
     if (!response.ok) {
       return false
